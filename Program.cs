@@ -161,6 +161,3 @@ class Program
         list.Display();
     }
 }
-
-
-    

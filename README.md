@@ -35,5 +35,3 @@ C# Program.cs
 MIT License
 
 // Внесення змін
-
-Зміни внесено
