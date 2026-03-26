@@ -1,0 +1,30 @@
+## Скомпилированные файлы и папки (Build results)
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+bin/
+obj/
+
+## Настройки Visual Studio и VS Code
+.vs/
+.vscode/
+*.user
+*.userosscache
+*.sln.docstates
+*.suo
+
+## NuGet пакеты (их нужно восстанавливать через dotnet restore)
+packages/
+*.nuget.props
+*.nuget.targets
+
+## Результаты тестов
+TestResults/
+
+## Системные файлы (особенно важно для твоего Mac)
+.DS_Store
+Thumbs.db
+
+## Локальные файлы конфигурации (если есть секреты)
+appsettings.Development.json
