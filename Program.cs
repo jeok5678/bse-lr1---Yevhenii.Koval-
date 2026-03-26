@@ -86,6 +86,70 @@ public class LinkedList<T>
     }
 }
 
+public class LinkedListExtensions<T>
+{
+    public int Count(LinkedList<T> list)
+    {
+        int count = 0;
+        Node<T> current = list.head;
+        while (current != null)
+        {
+            count++;
+            current = current.Next;
+        }
+        return count;
+    }
+
+    public T GetAt(LinkedList<T> list, int index)
+    {
+        Node<T> current = list.head;
+        int i = 0;
+        while (current != null && i < index)
+        {
+            current = current.Next;
+            i++;
+        }
+        return current != null ? current.Data : default(T);
+    }
+
+    public void InsertAt(LinkedList<T> list, T data, int index)
+    {
+        Node<T> newNode = new Node<T>(data);
+        if (index == 0)
+        {
+            newNode.Next = list.head;
+            list.head = newNode;
+            return;
+        }
+        Node<T> current = list.head;
+        for (int i = 0; i < index - 1 && current != null; i++)
+            current = current.Next;
+        if (current != null)
+        {
+            newNode.Next = current.Next;
+            current.Next = newNode;
+        }
+    }
+
+    public void Reverse(LinkedList<T> list)
+    {
+        Node<T> prev = null, current = list.head;
+        while (current != null)
+        {
+            Node<T> next = current.Next;
+            current.Next = prev;
+            prev = current;
+            current = next;
+        }
+        list.head = prev;
+    }
+
+    public void Clear(LinkedList<T> list)
+    {
+        list.head = null;
+    }
+}
+
 class Program
 {
     static void Main()
