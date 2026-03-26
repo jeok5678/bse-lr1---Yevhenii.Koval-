@@ -33,3 +33,5 @@ C# Program.cs
 ## Ліцензія
 
 MIT License
+
+// Внесення змін
